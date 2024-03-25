@@ -1,0 +1,11 @@
+default_location                         = "swedencentral"
+firewall_subnet_address_prefix           = "10.0.0.0/24"
+gateway_subnet_address_prefix            = "10.0.1.0/24"
+hub_virtual_network_address_prefix       = "10.0.0.0/22"
+root_id                                  = "con"
+root_name                                = "Contoso"
+root_parent_management_group_id          = ""
+subscription_id_connectivity             = "4fff7052-79ed-47e6-95cf-a40b992bc949"
+subscription_id_identity                 = "4fff7052-79ed-47e6-95cf-a40b992bc949"
+subscription_id_management               = "4fff7052-79ed-47e6-95cf-a40b992bc949"
+virtual_network_gateway_creation_enabled = false
