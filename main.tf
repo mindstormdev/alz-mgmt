@@ -33,11 +33,11 @@ module "hubnetworking" {
       address_space       = [var.hub_virtual_network_address_prefix]
       location            = var.default_location
       resource_group_name = "rg-connectivity-${var.default_location}"
-      firewall = {
-        subnet_address_prefix = var.firewall_subnet_address_prefix
-        sku_tier              = "Standard"
-        sku_name              = "AZFW_VNet"
-      }
+      #firewall = {
+      #  subnet_address_prefix = var.firewall_subnet_address_prefix
+      #  sku_tier              = "Standard"
+      #  sku_name              = "AZFW_VNet"
+      #}
     }
   }
 
