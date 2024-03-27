@@ -76,7 +76,7 @@ module "virtual_network_gateway" {
       connection_protocol                = "IKEv2"
       dpd_timeout_seconds                = 30
       enable_bgp                         = false
-      local_azure_ip_address_enabled     = true
+      local_azure_ip_address_enabled     = false
       routing_weight                     = 100
       shared_key                         = "shared-key"
       ipsec_policy = {
