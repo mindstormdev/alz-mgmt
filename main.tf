@@ -64,6 +64,14 @@ module "virtual_network_gateway" {
   enable_telemetry                    = false
   virtual_network_name                = module.hubnetworking.virtual_networks["primary-hub"].name
   virtual_network_resource_group_name = "rg-connectivity-${var.default_location}"
+  local_network_gateways = {
+    "onpremise" = {
+      name            = "onpremise"
+      address_space   = ["192.168.0.0/16"]
+      gateway_address = "10.0.0.1"
+
+    }
+  }
 
   providers = {
     azurerm = azurerm.connectivity
