@@ -69,7 +69,7 @@ module "virtual_network_gateway" {
       name            = "onpremise"
       address_space   = ["192.168.0.0/16"]
       gateway_address = "10.0.0.1"
-      
+
     }
   }
 
