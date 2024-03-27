@@ -65,33 +65,33 @@ module "virtual_network_gateway" {
   virtual_network_name                = module.hubnetworking.virtual_networks["primary-hub"].name
   virtual_network_resource_group_name = "rg-connectivity-${var.default_location}"
   local_network_gateways = {
-  "onpremise" = {
-    name            = "onpremise"
-    address_space   = ["192.168.0.0/16"]
-    gateway_address = "10.0.0.1"
-    connection = {
-      name                               = "connection-onpremise"
-      type                               = "Vnet2Vnet"
-      connection_mode                    = "Initiate"
-      connection_protocol                = "IKEv2"
-      dpd_timeout_seconds                = 30
-      enable_bgp                         = false
-      local_azure_ip_address_enabled     = false
-      routing_weight                     = 100
-      shared_key                         = "shared-key"
-      ipsec_policy = {
-        dh_group         = "DHGroup2"
-        ike_encryption   = "AES256"
-        ike_integrity    = "SHA256"
-        ipsec_encryption = "AES256"
-        ipsec_integrity  = "SHA256"
-        pfs_group        = "PFS2"
-        sa_datasize      = 102400000
-        sa_lifetime      = 3600
+    "onpremise" = {
+      name            = "onpremise"
+      address_space   = ["192.168.0.0/16"]
+      gateway_address = "10.0.0.1"
+      connection = {
+        name                           = "connection-onpremise"
+        type                           = "Vnet2Vnet"
+        connection_mode                = "Initiate"
+        connection_protocol            = "IKEv2"
+        dpd_timeout_seconds            = 30
+        enable_bgp                     = false
+        local_azure_ip_address_enabled = false
+        routing_weight                 = 100
+        shared_key                     = "shared-key"
+        ipsec_policy = {
+          dh_group         = "DHGroup2"
+          ike_encryption   = "AES256"
+          ike_integrity    = "SHA256"
+          ipsec_encryption = "AES256"
+          ipsec_integrity  = "SHA256"
+          pfs_group        = "PFS2"
+          sa_datasize      = 102400000
+          sa_lifetime      = 3600
+        }
       }
     }
   }
-}
 
   providers = {
     azurerm = azurerm.connectivity
