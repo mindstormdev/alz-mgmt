@@ -8,4 +8,4 @@ root_parent_management_group_id          = ""
 subscription_id_connectivity             = "4fff7052-79ed-47e6-95cf-a40b992bc949"
 subscription_id_identity                 = "4fff7052-79ed-47e6-95cf-a40b992bc949"
 subscription_id_management               = "4fff7052-79ed-47e6-95cf-a40b992bc949"
-virtual_network_gateway_creation_enabled = false
+virtual_network_gateway_creation_enabled = true
